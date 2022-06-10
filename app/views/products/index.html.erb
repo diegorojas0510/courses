@@ -1,0 +1,23 @@
+
+<div class="col-lg-8 mb-3"><h1>Products</h1></div>
+
+<table class="table table-bordered border-primary">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">NAME</th>
+    <th scope="col">Descripción</th>
+    <th scope="col">Precio</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @products.each do |product| %>
+  <tr>
+    <th scope="row"> <%= "#{product.id} "%></th>
+    <td><%= "#{product.name} "%></td>
+    <td><%= "#{product.description} "%></td>
+    <td><%= " $ #{product.price} "%></td>
+  </tr>
+    <% end %>
+  </tbody>
+</table>
